@@ -167,12 +167,6 @@ const Index = () => {
       icon: Phone,
       label: t.callMe,
       onClick: handleCallClick,
-      className: 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
-    },
-    {
-      icon: Mail,
-      label: t.sendEmail,
-      onClick: handleEmailClick,
       className: 'bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600'
     }
   ];
