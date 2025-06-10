@@ -82,6 +82,10 @@ const Index = () => {
     window.open(`https://wa.me/14157241085?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  const handleFloridaLocationsClick = () => {
+    window.location.href = '/florida-locations';
+  };
+
   const socialButtons = [
     {
       icon: Facebook,
@@ -115,6 +119,12 @@ const Index = () => {
       label: t.chatWhatsapp,
       onClick: handleWhatsAppClick,
       className: 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700'
+    },
+    {
+      icon: MapPin,
+      label: language === 'pt' ? 'Localidades Florida' : language === 'en' ? 'Florida Locations' : 'Ubicaciones Florida',
+      onClick: handleFloridaLocationsClick,
+      className: 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600'
     }
   ];
 
@@ -257,14 +267,6 @@ const Index = () => {
                 {button.label}
               </Button>
             ))}
-
-            {/* Florida Locations Link */}
-            <Link to="/florida-locations">
-              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
-                <MapPin className="w-4 h-4 mr-2" />
-                {language === 'pt' ? 'Localidades Florida' : language === 'en' ? 'Florida Locations' : 'Ubicaciones Florida'}
-              </Button>
-            </Link>
           </div>
 
           {/* Footer */}
