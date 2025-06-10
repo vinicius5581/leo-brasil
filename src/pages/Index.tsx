@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
+import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -11,7 +11,7 @@ const translations = {
     description: "MPB • Sertanejo • Pop • Música Brasileira",
     bio: "Trazendo os sons autênticos do Brasil para o mundo. Conectando corações através da música.",
     instagram: "Instagram",
-    youtube: "YouTube", 
+    facebook: "Facebook", 
     venmo: "Gorjeta Venmo",
     zelle: "Gorjeta Zelle",
     whatsapp: "WhatsApp",
@@ -19,7 +19,7 @@ const translations = {
     tipVenmo: "Apoie via Venmo",
     tipZelle: "Apoie via Zelle",
     followInstagram: "Siga no Instagram",
-    subscribeYoutube: "Inscreva-se no YouTube",
+    followFacebook: "Siga no Facebook",
     chatWhatsapp: "Converse no WhatsApp"
   },
   en: {
@@ -28,7 +28,7 @@ const translations = {
     description: "MPB • Sertanejo • Pop • Brazilian Music",
     bio: "Bringing authentic Brazilian sounds to the world. Connecting hearts through music.",
     instagram: "Instagram",
-    youtube: "YouTube",
+    facebook: "Facebook",
     venmo: "Tip Venmo", 
     zelle: "Tip Zelle",
     whatsapp: "WhatsApp",
@@ -36,7 +36,7 @@ const translations = {
     tipVenmo: "Support via Venmo",
     tipZelle: "Support via Zelle", 
     followInstagram: "Follow on Instagram",
-    subscribeYoutube: "Subscribe on YouTube",
+    followFacebook: "Follow on Facebook",
     chatWhatsapp: "Chat on WhatsApp"
   },
   es: {
@@ -45,7 +45,7 @@ const translations = {
     description: "MPB • Sertanejo • Pop • Música Brasileña",
     bio: "Llevando los sonidos auténticos de Brasil al mundo. Conectando corazones a través de la música.",
     instagram: "Instagram",
-    youtube: "YouTube",
+    facebook: "Facebook",
     venmo: "Propina Venmo",
     zelle: "Propina Zelle", 
     whatsapp: "WhatsApp",
@@ -53,7 +53,7 @@ const translations = {
     tipVenmo: "Apoyar vía Venmo",
     tipZelle: "Apoyar vía Zelle",
     followInstagram: "Seguir en Instagram", 
-    subscribeYoutube: "Suscribirse en YouTube",
+    followFacebook: "Seguir en Facebook",
     chatWhatsapp: "Chatear en WhatsApp"
   }
 };
@@ -89,10 +89,10 @@ const Index = () => {
       className: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
     },
     {
-      icon: Youtube,
-      label: t.subscribeYoutube, 
-      href: 'https://youtube.com/@leobrasil100',
-      className: 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700'
+      icon: Facebook,
+      label: t.followFacebook, 
+      href: 'https://www.facebook.com/leo.brasil.547',
+      className: 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800'
     }
   ];
 
