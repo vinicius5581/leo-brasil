@@ -3,6 +3,7 @@ import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe } from 'lu
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Link } from 'react-router-dom';
 
 const translations = {
   pt: {
@@ -266,14 +267,16 @@ const Index = () => {
 
           {/* QR Code */}
           <div className="flex justify-center pt-4">
-            <div className="bg-white p-4 rounded-lg shadow-lg">
-              <img 
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent('https://leobrasil.com')}`}
-                alt="QR Code - leobrasil.com"
-                className="w-30 h-30"
-              />
-              <p className="text-xs text-gray-600 mt-2 text-center">leobrasil.com</p>
-            </div>
+            <Link to="/qrcode" className="block">
+              <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <img 
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent('https://leobrasil.com')}`}
+                  alt="QR Code - leobrasil.com"
+                  className="w-30 h-30"
+                />
+                <p className="text-xs text-gray-600 mt-2 text-center">leobrasil.com</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
