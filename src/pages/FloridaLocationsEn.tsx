@@ -1,4 +1,3 @@
-
 import { MapPin, Music, Calendar, Phone, Mail, ArrowLeft, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -35,7 +34,7 @@ const FloridaLocationsEn = () => {
       {/* Header with Back Button and Language Switcher */}
       <div className="flex justify-between items-center p-4">
         <Link to="/">
-          <Button variant="outline" className="mb-4">
+          <Button variant="outline" className="bg-white/20 border-white/30 text-gray-700 hover:bg-white/30">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
@@ -186,7 +185,7 @@ const FloridaLocationsEn = () => {
             
             <div>
               <Link to="/">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600 bg-transparent">
                   Visit Main Website
                 </Button>
               </Link>
