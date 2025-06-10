@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import QRCode from "./pages/QRCode";
 import ZellePhone from "./pages/ZellePhone";
 import ZelleEmail from "./pages/ZelleEmail";
+import FloridaLocations from "./pages/FloridaLocations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/qrcode" element={<QRCode />} />
           <Route path="/zelle-phone" element={<ZellePhone />} />
           <Route path="/zelle-email" element={<ZelleEmail />} />
+          <Route path="/florida-locations" element={<FloridaLocations />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

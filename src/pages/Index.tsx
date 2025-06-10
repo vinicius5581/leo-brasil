@@ -1,5 +1,6 @@
+
 import { useState } from 'react';
-import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe } from 'lucide-react';
+import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -257,6 +258,14 @@ const Index = () => {
                 {button.label}
               </Button>
             ))}
+
+            {/* Florida Locations Link */}
+            <Link to="/florida-locations">
+              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <MapPin className="w-4 h-4 mr-2" />
+                {language === 'pt' ? 'Localidades Florida' : language === 'en' ? 'Florida Locations' : 'Ubicaciones Florida'}
+              </Button>
+            </Link>
           </div>
 
           {/* Footer */}
