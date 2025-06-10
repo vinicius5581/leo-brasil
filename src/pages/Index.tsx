@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -238,7 +239,7 @@ const Index = () => {
             <div className="relative">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur-sm mb-4">
                 <img 
-                  src="/lovable-uploads/22b3817e-cb20-4aa0-9a0f-99d729eb4eb4.png" 
+                  src="/lovable-uploads/897a230b-6daf-4152-9e89-64abe456468d.png" 
                   alt="Leo Brasil"
                   className="w-full h-full object-cover"
                 />
