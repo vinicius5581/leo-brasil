@@ -9,6 +9,7 @@ const translations = {
   pt: {
     title: "Leo Brasil",
     subtitle: "Músico Brasileiro",
+    style: "Voz e Violão • Som do Barzinho",
     description: "MPB • Sertanejo • Forró • Pop • Música Brasileira",
     bio: "Trazendo os sons autênticos do Brasil para o mundo. Conectando corações através da música.",
     instagram: "Instagram",
@@ -29,6 +30,7 @@ const translations = {
   en: {
     title: "Leo Brasil", 
     subtitle: "Brazilian Musician",
+    style: "Voice & Guitar • Bar Sound",
     description: "MPB • Sertanejo • Forró • Pop • Brazilian Music",
     bio: "Bringing authentic Brazilian sounds to the world. Connecting hearts through music.",
     instagram: "Instagram",
@@ -48,7 +50,8 @@ const translations = {
   },
   es: {
     title: "Leo Brasil",
-    subtitle: "Músico Brasileño", 
+    subtitle: "Músico Brasileño",
+    style: "Voz y Guitarra • Sonido de Bar",
     description: "MPB • Sertanejo • Forró • Pop • Música Brasileña",
     bio: "Llevando los sonidos auténticos de Brasil al mundo. Conectando corazones a través de la música.",
     instagram: "Instagram",
@@ -283,6 +286,7 @@ const Index = () => {
             
             <h1 className="text-5xl font-bold text-white mb-2">{t.title}</h1>
             <p className="text-xl text-white/90 font-medium">{t.subtitle}</p>
+            <p className="text-lg text-white/80 font-medium">{t.style}</p>
             <p className="text-lg text-white/80">{t.description}</p>
             <p className="text-base text-white/70 px-4">{t.bio}</p>
           </div>
