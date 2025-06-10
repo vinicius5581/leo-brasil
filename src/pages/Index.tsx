@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,7 +10,7 @@ const translations = {
   pt: {
     title: "Leo Brasil",
     subtitle: "Músico Brasileiro",
-    description: "MPB • Sertanejo • Pop • Música Brasileira",
+    description: "MPB • Sertanejo • Forró • Pop • Música Brasileira",
     bio: "Trazendo os sons autênticos do Brasil para o mundo. Conectando corações através da música.",
     instagram: "Instagram",
     facebook: "Facebook", 
@@ -26,7 +27,7 @@ const translations = {
   en: {
     title: "Leo Brasil", 
     subtitle: "Brazilian Musician",
-    description: "MPB • Sertanejo • Pop • Brazilian Music",
+    description: "MPB • Sertanejo • Forró • Pop • Brazilian Music",
     bio: "Bringing authentic Brazilian sounds to the world. Connecting hearts through music.",
     instagram: "Instagram",
     facebook: "Facebook",
@@ -43,7 +44,7 @@ const translations = {
   es: {
     title: "Leo Brasil",
     subtitle: "Músico Brasileño", 
-    description: "MPB • Sertanejo • Pop • Música Brasileña",
+    description: "MPB • Sertanejo • Forró • Pop • Música Brasileña",
     bio: "Llevando los sonidos auténticos de Brasil al mundo. Conectando corazones a través de la música.",
     instagram: "Instagram",
     facebook: "Facebook",
