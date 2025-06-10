@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
