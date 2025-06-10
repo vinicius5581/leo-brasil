@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin } from 'lucide-react';
+import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -23,7 +22,9 @@ const translations = {
     followInstagram: "Siga no Instagram",
     followFacebook: "Siga no Facebook",
     chatWhatsapp: "Converse no WhatsApp",
-    hireForEvent: "Contrate Leo Brasil para o seu evento"
+    hireForEvent: "Contrate Leo Brasil para o seu evento",
+    callMe: "Me Ligue",
+    sendEmail: "Enviar Email"
   },
   en: {
     title: "Leo Brasil", 
@@ -41,7 +42,9 @@ const translations = {
     followInstagram: "Follow on Instagram",
     followFacebook: "Follow on Facebook",
     chatWhatsapp: "Chat on WhatsApp",
-    hireForEvent: "Hire Leo Brasil for your event"
+    hireForEvent: "Hire Leo Brasil for your event",
+    callMe: "Give Me a Call",
+    sendEmail: "Send Email"
   },
   es: {
     title: "Leo Brasil",
@@ -59,7 +62,9 @@ const translations = {
     followInstagram: "Seguir en Instagram", 
     followFacebook: "Seguir en Facebook",
     chatWhatsapp: "Chatear en WhatsApp",
-    hireForEvent: "Contratar Leo Brasil para tu evento"
+    hireForEvent: "Contratar Leo Brasil para tu evento",
+    callMe: "Llámame",
+    sendEmail: "Enviar Email"
   }
 };
 
@@ -93,6 +98,26 @@ const Index = () => {
       es: '/es/florida-locations'
     };
     window.location.href = routes[language];
+  };
+
+  const handleCallClick = () => {
+    window.open('tel:+14157241085', '_self');
+  };
+
+  const handleEmailClick = () => {
+    const subject = language === 'pt'
+      ? 'Contato via site - Leo Brasil'
+      : language === 'en'
+      ? 'Contact via website - Leo Brasil'
+      : 'Contacto vía sitio web - Leo Brasil';
+    
+    const body = language === 'pt'
+      ? 'Olá Leo! Vi seu site e gostaria de conversar sobre música.'
+      : language === 'en'
+      ? 'Hello Leo! I saw your website and would like to talk about music.'
+      : '¡Hola Leo! Vi tu sitio web y me gustaría hablar sobre música.';
+    
+    window.open(`mailto:usagoiania@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_self');
   };
 
   const socialButtons = [
@@ -134,6 +159,21 @@ const Index = () => {
       label: t.hireForEvent,
       onClick: handleFloridaLocationsClick,
       className: 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600'
+    }
+  ];
+
+  const directContactButtons = [
+    {
+      icon: Phone,
+      label: t.callMe,
+      onClick: handleCallClick,
+      className: 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
+    },
+    {
+      icon: Mail,
+      label: t.sendEmail,
+      onClick: handleEmailClick,
+      className: 'bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600'
     }
   ];
 
@@ -269,6 +309,18 @@ const Index = () => {
             {contactButtons.map((button, index) => (
               <Button
                 key={`contact-${index}`}
+                onClick={button.onClick}
+                className={`${button.className} text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105`}
+              >
+                <button.icon className="w-4 h-4 mr-2" />
+                {button.label}
+              </Button>
+            ))}
+
+            {/* Direct Contact Buttons */}
+            {directContactButtons.map((button, index) => (
+              <Button
+                key={`direct-${index}`}
                 onClick={button.onClick}
                 className={`${button.className} text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105`}
               >
