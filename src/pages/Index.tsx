@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -238,6 +237,12 @@ const Index = () => {
             ))}
           </div>
 
+          {/* Footer */}
+          <div className="text-white/60 text-sm">
+            <p>Leonel Rocha • 415-724-1085</p>
+            <p>usagoiania@hotmail.com</p>
+          </div>
+
           {/* QR Code */}
           <div className="flex justify-center pt-4">
             <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -248,12 +253,6 @@ const Index = () => {
               />
               <p className="text-xs text-gray-600 mt-2 text-center">leobrasil.com</p>
             </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-white/60 text-sm">
-            <p>Leonel Rocha • 415-724-1085</p>
-            <p>usagoiania@hotmail.com</p>
           </div>
         </div>
       </div>
