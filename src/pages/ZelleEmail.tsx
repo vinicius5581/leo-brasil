@@ -8,7 +8,7 @@ const ZelleEmail = () => {
     <div className="min-h-screen bg-gradient-to-br from-emerald-400 via-teal-500 to-blue-600 flex flex-col items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full text-center">
         <h1 className="text-2xl font-bold text-purple-700 mb-6">
-          Zelle - Email
+          Leo Brasil - Zelle
         </h1>
         
         <div className="mb-6">
