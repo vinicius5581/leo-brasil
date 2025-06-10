@@ -209,11 +209,11 @@ const Index = () => {
             <p className="text-base text-white/70 px-4">{t.bio}</p>
           </div>
 
-          {/* Social Media Buttons */}
+          {/* All Buttons with Equal Spacing */}
           <div className="space-y-3">
             {socialButtons.map((button, index) => (
               <Button
-                key={index}
+                key={`social-${index}`}
                 onClick={() => window.open(button.href, '_blank')}
                 className={`${button.className} text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105`}
               >
@@ -221,13 +221,10 @@ const Index = () => {
                 {button.label}
               </Button>
             ))}
-          </div>
-
-          {/* Contact & Tip Buttons */}
-          <div className="space-y-3">
+            
             {contactButtons.map((button, index) => (
               <Button
-                key={index}
+                key={`contact-${index}`}
                 onClick={button.onClick}
                 className={`${button.className} text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105`}
               >
