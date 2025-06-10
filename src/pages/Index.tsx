@@ -302,9 +302,9 @@ const Index = () => {
                     </h3>
                     <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
                       <img 
-                        src="/lovable-uploads/f72ef890-cddb-41b7-852d-3f1dc93e277a.png"
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('tel:4157241085')}`}
                         alt="Zelle QR Code with Phone"
-                        className="w-48 h-48 object-contain"
+                        className="w-50 h-50"
                       />
                     </div>
                     <p className="font-semibold text-gray-800 text-center">
@@ -321,9 +321,9 @@ const Index = () => {
                     </h3>
                     <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
                       <img 
-                        src="/lovable-uploads/f72ef890-cddb-41b7-852d-3f1dc93e277a.png"
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('mailto:usagoiania@hotmail.com')}`}
                         alt="Zelle QR Code with Email"
-                        className="w-48 h-48 object-contain"
+                        className="w-50 h-50"
                       />
                     </div>
                     <p className="font-semibold text-gray-800 text-center">
