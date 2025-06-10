@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -190,7 +189,7 @@ const Index = () => {
 
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-4 pb-8 relative z-10">
-        <div className="text-center max-w-md w-full space-y-8">
+        <div className="text-center max-w-md w-full space-y-6">
           {/* Header */}
           <div className="space-y-4">
             <div className="relative">
@@ -236,6 +235,18 @@ const Index = () => {
                 {button.label}
               </Button>
             ))}
+          </div>
+
+          {/* QR Code */}
+          <div className="flex justify-center pt-4">
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img 
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent('http://leobrasil.com')}`}
+                alt="QR Code - leobrasil.com"
+                className="w-30 h-30"
+              />
+              <p className="text-xs text-gray-600 mt-2 text-center">leobrasil.com</p>
+            </div>
           </div>
 
           {/* Footer */}
