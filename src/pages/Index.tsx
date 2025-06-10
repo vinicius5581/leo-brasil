@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -302,9 +303,9 @@ const Index = () => {
                     </h3>
                     <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
                       <img 
-                        src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('tel:4157241085')}`}
+                        src="/lovable-uploads/bbd89f45-29da-4506-8343-41ebb5a71c21.png"
                         alt="Zelle QR Code with Phone"
-                        className="w-50 h-50"
+                        className="w-64 h-80 object-contain"
                       />
                     </div>
                     <p className="font-semibold text-gray-800 text-center">
@@ -321,9 +322,9 @@ const Index = () => {
                     </h3>
                     <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
                       <img 
-                        src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('mailto:usagoiania@hotmail.com')}`}
+                        src="/lovable-uploads/94e18e5f-d5cd-4780-b3e9-b840ee7ad091.png"
                         alt="Zelle QR Code with Email"
-                        className="w-50 h-50"
+                        className="w-64 h-80 object-contain"
                       />
                     </div>
                     <p className="font-semibold text-gray-800 text-center">
