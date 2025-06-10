@@ -83,16 +83,16 @@ const Index = () => {
 
   const socialButtons = [
     {
-      icon: Instagram,
-      label: t.followInstagram,
-      href: 'https://www.instagram.com/leobrasil.usa',
-      className: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
-    },
-    {
       icon: Facebook,
       label: t.followFacebook, 
       href: 'https://www.facebook.com/leo.brasil.547',
       className: 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800'
+    },
+    {
+      icon: Instagram,
+      label: t.followInstagram,
+      href: 'https://www.instagram.com/leobrasil.usa',
+      className: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
     }
   ];
 
