@@ -1,3 +1,4 @@
+
 import { MapPin, Music, Calendar, Phone, Mail, ArrowLeft, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -36,7 +37,7 @@ const FloridaLocationsPt = () => {
         <Link to="/">
           <Button variant="outline" className="bg-white/20 border-white/30 text-gray-700 hover:bg-white/30">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar ao Início
+            Voltar
           </Button>
         </Link>
         
