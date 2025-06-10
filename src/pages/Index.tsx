@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Music, Instagram, Facebook, DollarSign, MessageCircle, Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,8 @@ const translations = {
     tipZelle: "Apoie via Zelle",
     followInstagram: "Siga no Instagram",
     followFacebook: "Siga no Facebook",
-    chatWhatsapp: "Converse no WhatsApp"
+    chatWhatsapp: "Converse no WhatsApp",
+    hireForEvent: "Contrate Leo Brasil para o seu evento"
   },
   en: {
     title: "Leo Brasil", 
@@ -39,7 +39,8 @@ const translations = {
     tipZelle: "Support via Zelle", 
     followInstagram: "Follow on Instagram",
     followFacebook: "Follow on Facebook",
-    chatWhatsapp: "Chat on WhatsApp"
+    chatWhatsapp: "Chat on WhatsApp",
+    hireForEvent: "Hire Leo Brasil for your event"
   },
   es: {
     title: "Leo Brasil",
@@ -56,7 +57,8 @@ const translations = {
     tipZelle: "Apoyar vía Zelle",
     followInstagram: "Seguir en Instagram", 
     followFacebook: "Seguir en Facebook",
-    chatWhatsapp: "Chatear en WhatsApp"
+    chatWhatsapp: "Chatear en WhatsApp",
+    hireForEvent: "Contratar Leo Brasil para tu evento"
   }
 };
 
@@ -123,7 +125,7 @@ const Index = () => {
     },
     {
       icon: MapPin,
-      label: language === 'pt' ? 'Localidades Florida' : language === 'en' ? 'Florida Locations' : 'Ubicaciones Florida',
+      label: t.hireForEvent,
       onClick: handleFloridaLocationsClick,
       className: 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600'
     }
