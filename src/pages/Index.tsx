@@ -61,7 +61,7 @@ const Index = () => {
   const t = translations[language];
 
   const handleVenmoClick = () => {
-    window.open('https://account.venmo.com/u/leonel-rocha', '_blank');
+    window.open('https://leobrasil.com/', '_blank');
   };
 
   const handleZelleClick = () => {
