@@ -1,5 +1,5 @@
 
-import { MapPin, Music, Calendar, Phone, Mail, ArrowLeft } from 'lucide-react';
+import { MapPin, Music, Calendar, Phone, Mail, ArrowLeft, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -32,14 +32,31 @@ const FloridaLocationsPt = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-100">
-      {/* Back Button */}
-      <div className="p-4">
+      {/* Header with Back Button and Language Switcher */}
+      <div className="flex justify-between items-center p-4">
         <Link to="/">
           <Button variant="outline" className="mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Voltar ao Início
           </Button>
         </Link>
+        
+        {/* Language Switcher */}
+        <div className="flex gap-2 bg-white/20 rounded-full p-1 backdrop-blur-sm">
+          <button className="px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 bg-white text-gray-800 shadow-lg">
+            PT
+          </button>
+          <Link to="/en/florida-locations">
+            <button className="px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 text-gray-600 hover:bg-white/20">
+              EN
+            </button>
+          </Link>
+          <Link to="/es/florida-locations">
+            <button className="px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 text-gray-600 hover:bg-white/20">
+              ES
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Header */}
