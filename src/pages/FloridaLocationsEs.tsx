@@ -186,7 +186,7 @@ const FloridaLocationsEs = () => {
             
             <div>
               <Link to="/">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600 bg-transparent">
                   Visita el Sitio Principal
                 </Button>
               </Link>
