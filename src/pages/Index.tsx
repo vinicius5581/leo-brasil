@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const translations = {
   pt: {
@@ -58,6 +59,7 @@ const translations = {
 
 const Index = () => {
   const [language, setLanguage] = useState<'pt' | 'en' | 'es'>('pt');
+  const [isZelleModalOpen, setIsZelleModalOpen] = useState(false);
   const t = translations[language];
 
   const handleVenmoClick = () => {
@@ -65,13 +67,7 @@ const Index = () => {
   };
 
   const handleZelleClick = () => {
-    const message = language === 'pt' 
-      ? 'Olá! Gostaria de enviar uma gorjeta via Zelle para Leo Brasil.'
-      : language === 'en'
-      ? 'Hello! I would like to send a tip via Zelle to Leo Brasil.'
-      : '¡Hola! Me gustaría enviar una propina vía Zelle a Leo Brasil.';
-    
-    window.open(`sms:415-724-1085?body=${encodeURIComponent(message)}`, '_blank');
+    setIsZelleModalOpen(true);
   };
 
   const handleWhatsAppClick = () => {
@@ -119,6 +115,27 @@ const Index = () => {
       className: 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700'
     }
   ];
+
+  const zelleInstructions = {
+    pt: {
+      title: "Enviar Gorjeta via Zelle",
+      instruction: "Escaneie o código QR no seu app bancário ou use:",
+      phone: "Telefone: 415-724-1085",
+      email: "Email: usagoiania@hotmail.com"
+    },
+    en: {
+      title: "Send Tip via Zelle", 
+      instruction: "Scan the QR code in your banking app or use:",
+      phone: "Phone: 415-724-1085",
+      email: "Email: usagoiania@hotmail.com"
+    },
+    es: {
+      title: "Enviar Propina vía Zelle",
+      instruction: "Escanea el código QR en tu app bancaria o usa:",
+      phone: "Teléfono: 415-724-1085",
+      email: "Email: usagoiania@hotmail.com"
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-400 via-teal-500 to-blue-600 flex flex-col relative overflow-hidden">
@@ -253,6 +270,37 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Zelle Modal */}
+      <Dialog open={isZelleModalOpen} onOpenChange={setIsZelleModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-bold text-purple-700">
+              {zelleInstructions[language].title}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col items-center space-y-4 p-4">
+            <p className="text-center text-gray-700 mb-4">
+              {zelleInstructions[language].instruction}
+            </p>
+            
+            {/* Zelle QR Code */}
+            <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
+              <img 
+                src="/lovable-uploads/f72ef890-cddb-41b7-852d-3f1dc93e277a.png"
+                alt="Zelle QR Code"
+                className="w-48 h-48 object-contain"
+              />
+            </div>
+            
+            {/* Contact Information */}
+            <div className="text-center space-y-2 mt-4">
+              <p className="font-semibold text-gray-800">{zelleInstructions[language].phone}</p>
+              <p className="font-semibold text-gray-800">{zelleInstructions[language].email}</p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
