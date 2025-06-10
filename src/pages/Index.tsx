@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const translations = {
   pt: {
@@ -121,19 +122,25 @@ const Index = () => {
       title: "Enviar Gorjeta via Zelle",
       instruction: "Escaneie o código QR no seu app bancário ou use:",
       phone: "Telefone: 415-724-1085",
-      email: "Email: usagoiania@hotmail.com"
+      email: "Email: usagoiania@hotmail.com",
+      phoneSlide: "QR Code com Telefone",
+      emailSlide: "QR Code com Email"
     },
     en: {
       title: "Send Tip via Zelle", 
       instruction: "Scan the QR code in your banking app or use:",
       phone: "Phone: 415-724-1085",
-      email: "Email: usagoiania@hotmail.com"
+      email: "Email: usagoiania@hotmail.com",
+      phoneSlide: "QR Code with Phone",
+      emailSlide: "QR Code with Email"
     },
     es: {
       title: "Enviar Propina vía Zelle",
       instruction: "Escanea el código QR en tu app bancaria o usa:",
       phone: "Teléfono: 415-724-1085",
-      email: "Email: usagoiania@hotmail.com"
+      email: "Email: usagoiania@hotmail.com",
+      phoneSlide: "QR Code con Teléfono",
+      emailSlide: "QR Code con Email"
     }
   };
 
@@ -284,20 +291,50 @@ const Index = () => {
               {zelleInstructions[language].instruction}
             </p>
             
-            {/* Zelle QR Code */}
-            <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
-              <img 
-                src="/lovable-uploads/f72ef890-cddb-41b7-852d-3f1dc93e277a.png"
-                alt="Zelle QR Code"
-                className="w-48 h-48 object-contain"
-              />
-            </div>
-            
-            {/* Contact Information */}
-            <div className="text-center space-y-2 mt-4">
-              <p className="font-semibold text-gray-800">{zelleInstructions[language].phone}</p>
-              <p className="font-semibold text-gray-800">{zelleInstructions[language].email}</p>
-            </div>
+            {/* Zelle QR Code Carousel */}
+            <Carousel className="w-full max-w-xs">
+              <CarouselContent>
+                {/* Phone QR Code Slide */}
+                <CarouselItem>
+                  <div className="flex flex-col items-center space-y-4">
+                    <h3 className="text-lg font-semibold text-purple-600">
+                      {zelleInstructions[language].phoneSlide}
+                    </h3>
+                    <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
+                      <img 
+                        src="/lovable-uploads/f72ef890-cddb-41b7-852d-3f1dc93e277a.png"
+                        alt="Zelle QR Code with Phone"
+                        className="w-48 h-48 object-contain"
+                      />
+                    </div>
+                    <p className="font-semibold text-gray-800 text-center">
+                      {zelleInstructions[language].phone}
+                    </p>
+                  </div>
+                </CarouselItem>
+                
+                {/* Email QR Code Slide */}
+                <CarouselItem>
+                  <div className="flex flex-col items-center space-y-4">
+                    <h3 className="text-lg font-semibold text-purple-600">
+                      {zelleInstructions[language].emailSlide}
+                    </h3>
+                    <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200">
+                      <img 
+                        src="/lovable-uploads/f72ef890-cddb-41b7-852d-3f1dc93e277a.png"
+                        alt="Zelle QR Code with Email"
+                        className="w-48 h-48 object-contain"
+                      />
+                    </div>
+                    <p className="font-semibold text-gray-800 text-center">
+                      {zelleInstructions[language].email}
+                    </p>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </DialogContent>
       </Dialog>
