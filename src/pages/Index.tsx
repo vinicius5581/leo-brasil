@@ -303,10 +303,8 @@ const Index = () => {
                     <h3 className="text-lg font-semibold text-purple-600">
                       {zelleInstructions[language].phoneSlide}
                     </h3>
-                    <a 
-                      href="/lovable-uploads/68b5f302-8c44-4b99-8514-bd8d564ec2b3.png" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <Link 
+                      to="/zelle-phone"
                       className="block"
                     >
                       <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
@@ -316,7 +314,7 @@ const Index = () => {
                           className="w-48 h-48 object-contain"
                         />
                       </div>
-                    </a>
+                    </Link>
                     <p className="font-semibold text-gray-800 text-center">
                       {zelleInstructions[language].phone}
                     </p>
@@ -329,10 +327,8 @@ const Index = () => {
                     <h3 className="text-lg font-semibold text-purple-600">
                       {zelleInstructions[language].emailSlide}
                     </h3>
-                    <a 
-                      href="/lovable-uploads/658cef87-6c95-4c9c-980e-5df3a9c2e6d1.png" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <Link 
+                      to="/zelle-email"
                       className="block"
                     >
                       <div className="bg-white p-4 rounded-lg shadow-lg border-2 border-purple-200 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
@@ -342,7 +338,7 @@ const Index = () => {
                           className="w-48 h-48 object-contain"
                         />
                       </div>
-                    </a>
+                    </Link>
                     <p className="font-semibold text-gray-800 text-center">
                       {zelleInstructions[language].email}
                     </p>
