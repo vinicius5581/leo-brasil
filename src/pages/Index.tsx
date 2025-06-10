@@ -86,7 +86,12 @@ const Index = () => {
   };
 
   const handleFloridaLocationsClick = () => {
-    window.location.href = '/florida-locations';
+    const routes = {
+      pt: '/pt/florida-locations',
+      en: '/en/florida-locations',
+      es: '/es/florida-locations'
+    };
+    window.location.href = routes[language];
   };
 
   const socialButtons = [
