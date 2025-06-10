@@ -122,9 +122,55 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-400 via-teal-500 to-blue-600 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-400 via-teal-500 to-blue-600 flex flex-col relative overflow-hidden">
+      {/* Animated Musical Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Staff Lines */}
+        <div className="absolute top-1/4 left-0 right-0 opacity-10">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={`staff-${i}`}
+              className="h-px bg-white mb-4 animate-pulse"
+              style={{ animationDelay: `${i * 0.2}s` }}
+            />
+          ))}
+        </div>
+        
+        {/* Floating Musical Notes */}
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={`note-${i}`}
+            className="absolute text-white/20 text-2xl animate-bounce"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          >
+            ♪
+          </div>
+        ))}
+        
+        {/* Additional Musical Symbols */}
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={`symbol-${i}`}
+            className="absolute text-white/15 text-xl animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          >
+            {i % 2 === 0 ? '♫' : '𝄞'}
+          </div>
+        ))}
+      </div>
+
       {/* Language Switcher */}
-      <div className="flex justify-end p-4">
+      <div className="flex justify-end p-4 relative z-10">
         <div className="flex gap-2 bg-white/20 rounded-full p-1 backdrop-blur-sm">
           {(['pt', 'en', 'es'] as const).map((lang) => (
             <button
@@ -143,13 +189,17 @@ const Index = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center px-4 pb-8">
+      <div className="flex-1 flex items-center justify-center px-4 pb-8 relative z-10">
         <div className="text-center max-w-md w-full space-y-8">
           {/* Header */}
           <div className="space-y-4">
             <div className="relative">
-              <div className="w-24 h-24 mx-auto bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm mb-4">
-                <Music className="w-12 h-12 text-white" />
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur-sm mb-4">
+                <img 
+                  src="/lovable-uploads/22b3817e-cb20-4aa0-9a0f-99d729eb4eb4.png" 
+                  alt="Leo Brasil"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 to-green-400/30 rounded-full blur-xl"></div>
             </div>
