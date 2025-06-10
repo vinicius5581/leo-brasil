@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Music, Instagram, Youtube, DollarSign, MessageCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -241,7 +242,7 @@ const Index = () => {
           <div className="flex justify-center pt-4">
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img 
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent('http://leobrasil.com')}`}
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent('https://leobrasil.com')}`}
                 alt="QR Code - leobrasil.com"
                 className="w-30 h-30"
               />
