@@ -161,12 +161,12 @@ const Index = () => {
           </div>
 
           {/* Social Media Buttons */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="space-y-3">
             {socialButtons.map((button, index) => (
               <Button
                 key={index}
                 onClick={() => window.open(button.href, '_blank')}
-                className={`${button.className} text-white border-0 h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105`}
+                className={`${button.className} text-white border-0 w-full h-12 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105`}
               >
                 <button.icon className="w-4 h-4 mr-2" />
                 {button.label}
