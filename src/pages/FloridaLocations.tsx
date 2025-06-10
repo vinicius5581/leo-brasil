@@ -42,10 +42,26 @@ const FloridaLocations = () => {
         </Link>
       </div>
 
-      {/* Contact Information at Top */}
-      <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-8 mb-8">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            Brazilian Musician in Florida
+          </h1>
+          <h2 className="text-xl md:text-2xl mb-4">
+            Músico Brasileiro na Flórida
+          </h2>
+          <h3 className="text-xl md:text-2xl mb-6">
+            Músico Brasileño en Florida
+          </h3>
+          <p className="text-lg max-w-4xl mx-auto leading-relaxed mb-8">
+            Discover the vibrant rhythms of Brazil with a professional Brazilian musician available across Florida. 
+            Specializing in Samba, Sertanejo, MPB, Forró, and more, offering live performances and entertainment 
+            for events, weddings, and celebrations.
+          </p>
+          
+          {/* Contact Information */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleWhatsAppClick}
               className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 text-lg w-full sm:w-auto"
@@ -62,26 +78,6 @@ const FloridaLocations = () => {
               Email: usagoiania@hotmail.com
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Header */}
-      <div className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Brazilian Musician in Florida
-          </h1>
-          <h2 className="text-xl md:text-2xl mb-4">
-            Músico Brasileiro na Flórida
-          </h2>
-          <h3 className="text-xl md:text-2xl mb-6">
-            Músico Brasileño en Florida
-          </h3>
-          <p className="text-lg max-w-4xl mx-auto leading-relaxed">
-            Discover the vibrant rhythms of Brazil with a professional Brazilian musician available across Florida. 
-            Specializing in Samba, Sertanejo, MPB, Forró, and more, offering live performances and entertainment 
-            for events, weddings, and celebrations.
-          </p>
         </div>
       </div>
 
